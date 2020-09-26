@@ -49,16 +49,11 @@ public class LinuxPathTraverser {
 		
 		Scanner sc=new Scanner(System.in);
 		CommandExecutorInterface cmdexec=new CommandExecutor();
-		String line;
-		
-		
-		/*
-		 * while loop with true hardcoded to accept input in definitely
-		 */
-		while(true)
+		String command;
+
+		while(!(command=sc.nextLine()).equalsIgnoreCase("exit"))
 			{
-				line=sc.nextLine();
-				executeCommands(line, cmdexec);
+				executeCommands(command, cmdexec);
 			}	
 		
 	}
